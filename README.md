@@ -1,5 +1,12 @@
 # VTK
 
+VTK has two models: 
+
+visualization model &emsp; &&& &emsp; Graphics model
+
+Source &#8594; Filter &#8594; Mapper &#8594; Actor &#8594; Renderer
+
+
 VTK steps{
     
     create Geometry;

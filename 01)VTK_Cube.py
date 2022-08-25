@@ -5,7 +5,8 @@ cube = vtk.vtkCubeSource()
 
 #-----------mapper---------------
 cubeMapper = vtk.vtkPolyDataMapper()
-# get the cube output to be used as input to the mapper
+# setInput & GetOutPut: used to connect different objects
+# So, it will get the cube output to be used as input to the mapper
 cubeMapper.SetInputConnection(cube.GetOutputPort())
 
 #---------------actor---------------

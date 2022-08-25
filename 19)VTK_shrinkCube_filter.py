@@ -1,18 +1,31 @@
 import vtk
 
+colors = vtk.vtkNamedColors()
+
 #-------Data source--------
 cube = vtk.vtkCubeSource()
 
+#-----Adding filter-------------
+shrink = vtk.vtkShrinkFilter()
+shrink.SetInputConnection(cube.GetOutputPort())
+shrink.SetShrinkFactor(0.9)
+
 #-----------mapper---------------
-cubeMapper = vtk.vtkPolyDataMapper()
-# setInput & GetOutPut: used to connect different objects
-# So, it will get the cube output to be used as input to the mapper
-cubeMapper.SetInputConnection(cube.GetOutputPort())
+cubeMapper = vtk.vtkDataSetMapper()
+cubeMapper.SetInputConnection(shrink.GetOutputPort())
+
+
 
 #---------------actor---------------
 cubeActor = vtk.vtkActor()
 cubeActor.SetMapper(cubeMapper)
 cubeActor.GetProperty().SetColor(1, 0, 0)
+cubeActor.GetProperty().EdgeVisibilityOn()
+
+back = vtk.vtkProperty()
+back.SetColor(colors.GetColor3d('Tomato'))
+
+cubeActor.SetBackfaceProperty(back)
 
 #---------------rendering window & renderer---------------
 renderer = vtk.vtkRenderer()

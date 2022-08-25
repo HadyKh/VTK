@@ -10,7 +10,8 @@ Source: External data source or generate data<br>
 Filter: transform data input 'Transformation' produce geometry or visualization objects but they are note graphics objects yet<br>
 Mapper: process convert filter outputs to anobject that can be displayed (graphics model object) to be sent to the graphics model 'Actor & renderer'<br>
 
-#VTK steps{
+# VTK steps
+{
     
     create Geometry;
     create a mapper;

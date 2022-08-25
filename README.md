@@ -6,9 +6,9 @@ visualization model &emsp; &&& &emsp; Graphics model
 
 Source &#8594; Filter &#8594; Mapper &#8594; Actor &#8594; Renderer
 
-Source: External data source or generate data<br>
-Filter: transform data input 'Transformation' produce geometry or visualization objects but they are note graphics objects yet<br>
-Mapper: process convert filter outputs to anobject that can be displayed (graphics model object) to be sent to the graphics model 'Actor & renderer'<br>
+<ins>Source:</ins> External data source or generate data<br>
+<ins>Filter:</ins> transform data input 'Transformation' produce geometry or visualization objects but they are note graphics objects yet<br>
+<ins>Mapper:</ins> process convert filter outputs to anobject that can be displayed (graphics model object) to be sent to the graphics model 'Actor & renderer'<br>
 
 # VTK steps
 {
